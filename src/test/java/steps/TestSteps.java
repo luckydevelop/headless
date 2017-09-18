@@ -14,10 +14,10 @@ public class TestSteps {
     public void test() throws Throwable {
 
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\luckyPC\\Desktop\\Temp\\ert\\src\\test\\resources\\drivers\\geckodriver.exe");
-        //DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-      //  capabilities.setCapability("marionette", true);
-        //WebDriver driver = new FirefoxDriver(capabilities);
-        WebDriver driver = new FirefoxDriver();
+       DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+       capabilities.setCapability("marionette", true);
+       WebDriver driver = new FirefoxDriver(capabilities);
+       // WebDriver driver = new FirefoxDriver();
        // driver.get("http://www.toolsqa.com");
 
        // WebDriver webDriver = new ChromeDriver();
