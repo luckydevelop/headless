@@ -13,9 +13,7 @@ public class TestSteps {
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
-        ChromeOptions options = new ChromeOptions();
-        //options.addArguments("headless");
-        WebDriver webDriver = new ChromeDriver(options);
+        WebDriver webDriver = new ChromeDriver();
         webDriver.get("https://mvnrepository.com");
         String title = webDriver.getTitle();
         System.out.println(title);
