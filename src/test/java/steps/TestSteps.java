@@ -39,7 +39,8 @@ public class TestSteps {
         WebDriver driver = new FirefoxDriver();
 
         driver.get("http://www.toolsqa.com");
-        Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial");
+        Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial2");
+        System.out.println(driver.getTitle());
         driver.quit();
 
 
