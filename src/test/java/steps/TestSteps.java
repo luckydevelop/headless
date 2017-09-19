@@ -1,9 +1,12 @@
 package steps;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,6 +27,16 @@ public class TestSteps {
     }
 
     @After
+    public void tearDown(Scenario scenario) {
+
+        if (scenario.isFailed()) {
+            // Take a screenshot...
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.embed(screenshot, "image/png");
+        }
+    }
+
+    @After
     public void tearDown(){
         driver.quit();
     }
@@ -35,7 +48,6 @@ public class TestSteps {
         driver.get("http://www.toolsqa.com");
         Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial");
         System.out.println(driver.getTitle());
-        driver.quit();
     }
 
     @Given("^Test2$")
