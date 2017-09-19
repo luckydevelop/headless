@@ -17,7 +17,7 @@ public class TestSteps {
     @Given("^Test$")
     public void test() throws Throwable {
 
-       System.setProperty("webdriver.gecko.driver", "C:\\Users\\luckyPC\\Desktop\\Temp");
+      // System.setProperty("webdriver.gecko.driver", "C:\\Users\\luckyPC\\Desktop\\Temp");
        //System.setProperty("webdriver.firefox.driver", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
        // File pathToBinary = new File("C:\Users\luckyPC\Desktop\Temp\ert\src\test\resources\drivers\geckodriver.exe");
        // FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
