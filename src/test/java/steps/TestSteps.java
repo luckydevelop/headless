@@ -1,6 +1,7 @@
 package steps;
 
 import cucumber.api.java.en.Given;
+import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -13,6 +14,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.File;
 
 public class TestSteps {
+
+    WebDriver driver;
 
     @Given("^Test$")
     public void test() throws Throwable {
@@ -36,13 +39,14 @@ public class TestSteps {
        //WebDriver driver = new FirefoxDriver();
 
 
-        WebDriver driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
 
         driver.get("http://www.toolsqa.com");
         Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial2");
         System.out.println(driver.getTitle());
+    }
+    @After
+    public void tearDown(){
         driver.quit();
-
-
     }
 }
