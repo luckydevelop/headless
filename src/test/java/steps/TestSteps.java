@@ -5,8 +5,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
@@ -17,7 +17,8 @@ public class TestSteps {
     @Given("^Test$")
     public void test() throws Throwable {
 
-       System.setProperty("webdriver.gecko.driver", "C:\\Users\\luckyPC\\Desktop\\Temp\\ert\\src\\test\\resources\\drivers\\geckodriver.exe");
+       System.setProperty("webdriver.gecko.driver", "C:\\Users\\luckyPC\\Desktop\\Temp");
+       //System.setProperty("webdriver.firefox.driver", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
        // File pathToBinary = new File("C:\Users\luckyPC\Desktop\Temp\ert\src\test\resources\drivers\geckodriver.exe");
        // FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
        // FirefoxProfile firefoxProfile = new FirefoxProfile();
@@ -29,7 +30,14 @@ public class TestSteps {
 
       //  WebDriver driver = new FirefoxDriver(capa);
 
-       WebDriver driver = new FirefoxDriver();
+        //DesiredCapabilities capabilities=DesiredCapabilities.firefox();
+
+       // capabilities.setCapability("app", "PATH_TO_APP");
+       //WebDriver driver = new FirefoxDriver();
+
+
+        WebDriver driver = new FirefoxDriver();
+
         driver.get("http://www.toolsqa.com");
         Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial");
         driver.quit();
