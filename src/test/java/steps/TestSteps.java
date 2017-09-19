@@ -19,7 +19,7 @@ import java.io.File;
 
 public class TestSteps {
 
-    WebDriver driver;
+    static WebDriver driver;
 
     @Before
     public void before(){
@@ -27,7 +27,7 @@ public class TestSteps {
     }
 
     @After
-    public void tearDown(Scenario scenario) {
+    public void makeScreen(Scenario scenario) {
 
         if (scenario.isFailed()) {
             // Take a screenshot...
@@ -52,7 +52,7 @@ public class TestSteps {
 
     @Given("^Test2$")
     public void test2()  {
-        driver = new FirefoxDriver();
+         driver = new FirefoxDriver();
         driver.get("http://www.toolsqa.com");
         Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial2");
     }
