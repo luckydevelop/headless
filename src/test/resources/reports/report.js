@@ -19,8 +19,11 @@ formatter.step({
   "name": "Test",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "TestSteps.test()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 5336920136,
+  "status": "passed"
 });
 });
