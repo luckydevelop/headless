@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -24,6 +25,7 @@ public class TestSteps {
     @Before
     public void before(){
         System.out.println("before HI!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
     }
 
     @After
@@ -38,12 +40,14 @@ public class TestSteps {
 
     @After
     public void tearDown(){
+        if(driver!=null)
         driver.quit();
     }
 
     @Given("^Test$")
     public void test() {
-        driver = new FirefoxDriver();
+
+        driver = new ChromeDriver();
 
         driver.get("http://www.toolsqa.com");
         Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial");
@@ -52,7 +56,7 @@ public class TestSteps {
 
     @Given("^Test2$")
     public void test2()  {
-         driver = new FirefoxDriver();
+         driver = new ChromeDriver();
         driver.get("http://www.toolsqa.com");
         Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial2");
     }

@@ -7,42 +7,20 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 220544,
+  "duration": 169765,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 3,
-  "name": "Test",
-  "description": "",
-  "id": "test;test",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 4,
-  "name": "Test",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "TestSteps.test()"
-});
-formatter.result({
-  "duration": 9689421521,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 91043,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 818709935,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 36657,
-  "status": "passed"
-});
-formatter.scenario({
+  "comments": [
+    {
+      "line": 3,
+      "value": "#  Scenario: Test"
+    },
+    {
+      "line": 4,
+      "value": "#    Given Test"
+    }
+  ],
   "line": 6,
   "name": "Test2",
   "description": "",
@@ -59,17 +37,17 @@ formatter.match({
   "location": "TestSteps.test2()"
 });
 formatter.result({
-  "duration": 7002176300,
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c...ation Tools Tutorial[]\u003e but was:\u003c...ation Tools Tutorial[2]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat steps.TestSteps.test2(TestSteps.java:57)\r\n\tat ✽.Given Test2(test.feature:7)\r\n",
+  "duration": 8181527437,
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...ation Tools Tutorial[]\u003e but was:\u003c...ation Tools Tutorial[2]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat steps.TestSteps.test2(TestSteps.java:61)\r\n\tat ✽.Given Test2(test.feature:7)\r\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 661406047,
+  "duration": 342902685,
   "status": "passed"
 });
 formatter.after({
-  "duration": 658041990,
+  "duration": 1015609691,
   "status": "passed"
 });
 });
