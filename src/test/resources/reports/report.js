@@ -23,7 +23,8 @@ formatter.match({
   "location": "TestSteps.test()"
 });
 formatter.result({
-  "duration": 5336920136,
-  "status": "passed"
+  "duration": 6617425100,
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...ation Tools Tutorial[]\u003e but was:\u003c...ation Tools Tutorial[2]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat steps.TestSteps.test(TestSteps.java:42)\r\n\tat ✽.Given Test(test.feature:4)\r\n",
+  "status": "failed"
 });
 });
