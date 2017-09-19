@@ -44,6 +44,7 @@ public class TestSteps {
         driver.get("http://www.toolsqa.com");
         Assert.assertEquals(driver.getTitle(),"QA Automation Tools Tutorial");
         System.out.println(driver.getTitle());
+        driver.quit();
     }
     @After
     public void tearDown(){
