@@ -16,6 +16,7 @@ public class TestSteps {
     @Given("^Test$")
     public void test() throws Throwable {
 
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\luckyPC\\Desktop\\Temp\\ert\\src\\test\\resources\\drivers\\geckodriver.exe");
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         capabilities.setCapability("marionette", true);
         WebDriver driver = new FirefoxDriver(capabilities);
