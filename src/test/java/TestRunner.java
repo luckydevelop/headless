@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features"
         ,glue = "steps"
-        ,format = {"pretty", "html:src/test/resources/reports"}
+        ,format = {"pretty", "html:target/cucumber", "json:target/cucumber.json"}
 )
 
 public class TestRunner {
